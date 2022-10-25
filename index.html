@@ -4,6 +4,10 @@
     <title>Start of Reverse Engineering Elan System6 Protocol Documentation</title>
   </head>
 <body>
+ <h1>New Example Project: <a href="https://github.com/jeremyrode/CalendarScraper"> Calendar Scraper: Perform Time-Based Action via Scraping a Google Calendar </a></h1>
+  <p> Handling time and date-based events sucks.  Calendars are complicated and change, daylight savings time comes and goes.  Originally, I was developing an app to schedule my spa heater around time-of-use (TOU) electric rates.  The TOU rates change with season, on weekends and holidays.  At first, I was using the cron daemon, but it was a real pain to make exceptions or change anything.</p>
+  <p> I was thinking that the only interface I’ve ever liked is Google Calendar; so why not just use Google Calendar?  So here it is, less than 100 lines of Node.js that scrapes a Google calendar and translates the calendar events into Javascript setTimeout().  Gets the function call down to <.01 s on a Raspberry Pi W2.</p>
+
 <h1>Last Project: <a href="https://github.com/jeremyrode/elancontrol">
   Elan Control</a>
   </h1>
@@ -11,10 +15,6 @@
   <p>I have a Elan S6 multi-zone audio controller in my house and I love it.
     I wanted to be able to control it via my phone!  The plan is to get a RaspberryPi to bit bang the protocol.</p>
   <p>The project was a sucess, but did need some custom circuitry, which is described in the github repositoy.</p>
-  <img src="images/pcb_large.jpg">
-  <img src="images/installed_large.jpg">
-  <img src="images/pcb_on_pi_large.jpg">
-  <img src="images/prototype_large.jpg">
   <h1>Current Project: <a href="https://github.com/jeremyrode/spacontrol">
     Spa Control</a>
     </h1>
