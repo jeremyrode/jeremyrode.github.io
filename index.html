@@ -1,40 +1,48 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Start of Reverse Engineering Elan System6 Protocol Documentation</title>
-  </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeremy Rode's Tech Projects: Raspberry Pi, Node.js, and Home Automation</title>
+    <meta name="description" content="Explore a collection of open-source projects by Jeremy Rode, including home automation with a Raspberry Pi Pico, a Google Sheets data logger, a Google Calendar scraper, and custom hot tub and audio system controls.">
+</head>
 <body>
 
- <h1>New Rasberry Pi Pico W Project: <a href="https://github.com/jeremyrode/PicoSteamControl"> Pico Steam Control </a></h1>
-   This project implements a new Raspberry Pi Pico based control for a Leisure Steam One Touch LS series steam generator.
-The factory control PCB was misbehaving, and I have wanted to implement an automatic self-flush to clean the tank, 
-   so I thought it would be a good challenge to replace it with a Raspberry Pi Pico.
-This is my first MicroPython project. I was originally implementing this system in C, but when I started down the path to 
-   connect a Pico W to WiFi, I decided to try out MicroPython and I was blown away by the power and rapid development/test cycles.
-I mostly think this project might be interesting to people because of a few new ideas that I have not seen documented well in the wild:</p>
+    <main>
+        <h1>Jeremy Rode's Tech Projects</h1>
 
-  
- <h1>New Example Project: <a href="https://github.com/jeremyrode/GoogleSheetsDataLogger"> Google Sheets Data Logger: Log Data Directly to Google Sheets </a></h1>
-  <p>There are many ways to log data, but few are as easy, powerful, and free like Google Sheets. Originally, I was developing an app to log current and water depth data from a sump pump system in a basement using *.csv files.
-    I thought it would be neat to have the data directly sent to a Google sheet, having the graphs automatically update. It was actually easier than I expected, but I did think a few steps were poorly documented.
-  So here it is, a step-by-step easy example of logging data from a Raspberry Pi running node.js directly to a Google Sheet.</p>
+        <section>
+            <h2>New Project: Raspberry Pi Pico W for Steam Generator Control</h2>
+            <p>This project implements a new Raspberry Pi Pico based control for a Leisure Steam One Touch LS series steam generator. The factory control PCB was misbehaving, and I have wanted to implement an automatic self-flush to clean the tank, so I thought it would be a good challenge to replace it with a Raspberry Pi Pico. This is my first MicroPython project. I was originally implementing this system in C, but when I started down the path to connect a Pico W to WiFi, I decided to try out MicroPython and I was blown away by the power and rapid development/test cycles. I mostly think this project might be interesting to people because of a few new ideas that I have not seen documented well in the wild:</p>
+            <p><a href="https://github.com/jeremyrode/PicoSteamControl">View Project on GitHub: Pico Steam Control</a></p>
+        </section>
 
+        <section>
+            <h2>Example Project: Google Sheets Data Logger</h2>
+            <p>There are many ways to log data, but few are as easy, powerful, and free as Google Sheets. Originally, I was developing an app to log current and water depth data from a sump pump system in a basement using *.csv files. I thought it would be neat to have the data directly sent to a Google Sheet, having the graphs automatically update. It was actually easier than I expected, but I did think a few steps were poorly documented. So here it is, a step-by-step easy example of logging data from a Raspberry Pi running node.js directly to a Google Sheet.</p>
+            <p><a href="https://github.com/jeremyrode/GoogleSheetsDataLogger">View Project on GitHub: Log Data Directly to Google Sheets</a></p>
+        </section>
 
-  
- <h1> Example Project: <a href="https://github.com/jeremyrode/CalendarScraper"> Calendar Scraper: Perform Time-Based Action via Scraping a Google Calendar </a></h1>
-  <p> Handling time and date-based events sucks.  Calendars are complicated and change, daylight savings time comes and goes.  Originally, I was developing an app to schedule my spa heater around time-of-use (TOU) electric rates.  The TOU rates change with season, on weekends and holidays.  At first, I was using the cron daemon, but it was a real pain to make exceptions or change anything.</p>
-  <p> I was thinking that the only interface I’ve ever liked is Google Calendar; so why not just use Google Calendar?  So here it is, less than 100 lines of Node.js that scrapes a Google calendar and translates the calendar events into Javascript setTimeout().  Gets the function call down to <.01 s on a Raspberry Pi W2.</p>
+        <section>
+            <h2>Example Project: Calendar Scraper for Time-Based Actions</h2>
+            <p>Handling time and date-based events sucks. Calendars are complicated and change, and daylight savings time comes and goes. Originally, I was developing an app to schedule my spa heater around time-of-use (TOU) electric rates. The TOU rates change with season, on weekends and holidays. At first, I was using the cron daemon, but it was a real pain to make exceptions or change anything.</p>
+            <p>I was thinking that the only interface I’ve ever liked is Google Calendar; so why not just use Google Calendar? So here it is, less than 100 lines of Node.js that scrapes a Google calendar and translates the calendar events into Javascript setTimeout(). Gets the function call down to <.01 s on a Raspberry Pi W2.</p>
+            <p><a href="https://github.com/jeremyrode/CalendarScraper">View Project on GitHub: Calendar Scraper</a></p>
+        </section>
 
-<h1>Last Project: <a href="https://github.com/jeremyrode/elancontrol">
-  Elan Control</a>
-  </h1>
-  <p>A GPIO Bit Banging / RS-485 Inteface to a Elan System6 Integrated Multi-Zone Controller using a RaspberryPi</p>
-  <p>I have a Elan S6 multi-zone audio controller in my house and I love it.
-    I wanted to be able to control it via my phone!  The plan is to get a RaspberryPi to bit bang the protocol.</p>
-  <p>The project was a sucess, but did need some custom circuitry, which is described in the github repositoy.</p>
-  <h1>Current Project: <a href="https://github.com/jeremyrode/spacontrol">
-    Spa Control</a>
-    </h1>
-    <p>RS-485 Inteface to a Caldera Vacanza Hot Tub using a RaspberryPi</p>
+        <section>
+            <h2>Last Project: Elan System6 Control with Raspberry Pi</h2>
+            <p>A GPIO Bit Banging / RS-485 Interface to an Elan System6 Integrated Multi-Zone Controller using a Raspberry Pi.</p>
+            <p>I have an Elan S6 multi-zone audio controller in my house and I love it. I wanted to be able to control it via my phone! The plan was to get a Raspberry Pi to bit bang the protocol. The project was a success, but did need some custom circuitry, which is described in the GitHub repository.</p>
+            <p><a href="https://github.com/jeremyrode/elancontrol">View Project on GitHub: Elan Control</a></p>
+        </section>
+
+        <section>
+            <h2>Current Project: Spa Control for a Caldera Hot Tub</h2>
+            <p>RS-485 Interface to a Caldera Vacanza Hot Tub using a Raspberry Pi.</p>
+            <p><a href="https://github.com/jeremyrode/spacontrol">View Project on GitHub: Spa Control</a></p>
+        </section>
+    </main>
+
 </body>
 </html>
